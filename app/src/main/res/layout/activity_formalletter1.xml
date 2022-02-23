@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".formalemail"
+    android:background="@color/teal_700">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:orientation="vertical"
+    android:id="@+id/ll"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+
+        <EditText
+            android:id="@+id/etfromname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="From"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
+
+        <Space
+            android:layout_width="13dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/ettoname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="To "
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+
+        <EditText
+            android:id="@+id/etdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="Date"
+            android:textColor="@color/white"
+
+            android:textColorHint="@color/white"/>
+
+        <Space
+            android:layout_width="13dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/etsubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Subject"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+
+        <EditText
+            android:id="@+id/etreason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Reason"
+            android:textColor="@color/white"
+
+            android:textColorHint="@color/white"/>
+
+        <Button
+            android:textAlignment="center"
+            android:id="@+id/submit_btn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mybutton"
+            android:drawableRight="@drawable/submit"
+            android:shadowColor="#50B2DF"
+            android:textColor="@color/teal_700"
+            android:textColorHighlight="#50B2DF"
+            android:textColorHint="#50B2DF"
+            android:textColorLink="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white"
+            app:rippleColor="#50B2DF"
+            app:strokeColor="#50B2DF" />
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="match_parent">
+
+        </Space>
+
+        <Button
+
+            android:textAlignment="center"
+            android:id="@+id/copy_btn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mybutton"
+            android:drawableRight="@drawable/copy"
+            android:shadowColor="#50B2DF"
+            android:textColor="@color/teal_700"
+            android:textColorHighlight="#50B2DF"
+            android:textColorHint="#50B2DF"
+            android:textColorLink="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white"
+            app:rippleColor="#50B2DF"
+            app:strokeColor="#50B2DF" />
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/ll"
+        android:background="@color/white"
+        app:cardBackgroundColor="@color/white"
+        android:outlineSpotShadowColor="#000"
+        android:outlineAmbientShadowColor="#000"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+
+        <TextView
+
+            android:id="@+id/content"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars = "vertical"
+            android:textSize="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/teal_700">
+
+
+        </TextView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9511260428304528/7602196535">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

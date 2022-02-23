@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fromalletter"
+    android:background="@color/teal_700">
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:layout_height="55dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="FORMAL LETTER"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv"
+        android:layout_above="@+id/adView"
+        app:cardBackgroundColor="@color/teal_700"
+        android:outlineSpotShadowColor="#000"
+        android:outlineAmbientShadowColor="#000"
+        android:background="@color/white"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/list">
+</ListView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9511260428304528/7602196535">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
